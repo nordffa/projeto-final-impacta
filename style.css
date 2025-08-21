@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav{
+    background-color: #84b6f4;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.nav-list {
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 80px;
+}
+
+.nav-list a {
+
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+    font-weight: bold;
+    margin: 10px;
+
+
+}
