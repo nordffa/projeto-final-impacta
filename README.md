@@ -3,7 +3,7 @@ Projeto final do módulo "Software Product: Analysis, Specification, Project & I
 
 ## Dependências
 
-Antes de rodar o projeto, instale os pacotes necessários:
+No terminal, digite os seguintes comandos para instalar os pacotes necessários:
 
 ```bash
 pip install flask
