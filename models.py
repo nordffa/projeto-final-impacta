@@ -19,7 +19,7 @@ def listar_produtos():
     produtos = []
     if conn:
         cur = conn.cursor()
-        cur.execute("SELECT * FROM produto ORDER BY cod_produto")
+        cur.execute("SELECT * FROM produto WHERE ativo = TRUE ORDER BY cod_produto")
         produtos = cur.fetchall()
         cur.close()
         conn.close()
@@ -37,3 +37,25 @@ def atualizar_estoque(cod_produto, nova_qtde):
         conn.commit()
         cur.close()
         conn.close()
+
+
+# Desativar um produto (Soft Delete)
+def desativar_produto(cod_produto):
+    conn = get_connection()
+    if conn:
+        try:
+            cur = conn.cursor()
+            # O comando agora é um UPDATE para mudar o status da coluna 'ativo'
+            cur.execute(
+                "UPDATE produto SET ativo = FALSE WHERE cod_produto = %s",
+                (cod_produto,)
+            )
+            conn.commit()
+            print("Produto desativado com sucesso!")
+        except Exception as e:
+            conn.rollback()
+            print(f"Ocorreu um erro ao desativar o produto: {e}")
+        finally:
+            cur.close()
+            conn.close()
+
