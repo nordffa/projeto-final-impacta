@@ -6,5 +6,4 @@ Projeto final do módulo "Software Product: Analysis, Specification, Project & I
 No terminal, digite os seguintes comandos para instalar os pacotes necessários:
 
 ```bash
-pip install flask
-pip install psycopg2
+pip install flask psycopg2
