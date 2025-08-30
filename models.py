@@ -1,20 +1,25 @@
 from db import get_connection
 
-# Inserir produto
-def inserir_produto(descricao, valor_unitario, qtde_estoque, fornecedor):
+def inserir_produto(descricao, valor_unitario, qtde_estoque, fornecedor, ativo="TRUE"):
+    """
+    Funcao que insere produtos no banco de dados
+    """
     conn = get_connection()
     if conn:
         cur = conn.cursor()
         cur.execute(
-            "INSERT INTO produto (descricao, valor_unitario, qtde_estoque, fornecedor) VALUES (%s, %s, %s, %s)",
-            (descricao, valor_unitario, qtde_estoque, fornecedor)
+            "INSERT INTO produto (descricao, valor_unitario, qtde_estoque, fornecedor, ativo) VALUES (%s, %s, %s, %s, %s)",
+            (descricao, valor_unitario, qtde_estoque, fornecedor, ativo)
         )
         conn.commit()
         cur.close()
         conn.close()
 
-# Listar produtos
+
 def listar_produtos():
+    """
+    Funcao que lista todos os produtos do estoque
+    """
     conn = get_connection()
     produtos = []
     if conn:
@@ -25,8 +30,11 @@ def listar_produtos():
         conn.close()
     return produtos
 
-# Atualizar estoque
+
 def atualizar_estoque(cod_produto, nova_qtde):
+    """
+    Funcao que atualiza a quantidade do produto
+    """
     conn = get_connection()
     if conn:
         cur = conn.cursor()
@@ -39,8 +47,11 @@ def atualizar_estoque(cod_produto, nova_qtde):
         conn.close()
 
 
-# Desativar um produto (Soft Delete)
+# NAO ESTÁ SENDO UTILIZADO AINDA
 def desativar_produto(cod_produto):
+    """
+    Funcao que muda o status do produto para "FALSE" e remove da visualizacao de todos os produtos
+    """
     conn = get_connection()
     if conn:
         try:

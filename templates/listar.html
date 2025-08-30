@@ -13,7 +13,7 @@
             <th>Valor Unitário</th>
             <th>Estoque</th>
             <th>Fornecedor</th>
-            <th>Atualizar Estoque</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -27,7 +27,7 @@
             <td>
                 <form method="post" action="{{ url_for('atualizar', cod_produto=p[0]) }}" class="d-flex">
                     <input type="number" name="qtde_estoque" placeholder="Nova Qtde" class="form-control me-2" style="width: 120px;">
-                    <button type="submit" class="btn btn-sm btn-success">Atualizar</button>
+                    <button type="submit" class="btn btn-sm btn-success">Atualizar Estoque</button>
                 </form>
             </td>
         </tr>
