@@ -25,10 +25,19 @@
             <td>{{ p[3] }}</td>
             <td>{{ p[4] }}</td>
             <td>
-                <form method="post" action="{{ url_for('atualizar', cod_produto=p[0]) }}" class="d-flex">
-                    <input type="number" name="qtde_estoque" placeholder="Nova Qtde" class="form-control me-2" style="width: 120px;">
-                    <button type="submit" class="btn btn-sm btn-success">Atualizar Estoque</button>
-                </form>
+                <div class="d-flex">
+                    <form method="post" action="{{ url_for('atualizar', cod_produto=p[0]) }}" class="me-2 d-flex">
+                        <input type="number" name="qtde_estoque" placeholder="Nova Qtde"
+                            class="form-control me-2" style="width: 120px;">
+                        <button type="submit" class="btn btn-sm btn-success">
+                            <i class="bi bi-arrow-clockwise"></i> Atualizar Estoque</button>
+                    </form>
+                    <form method="post" action="{{ url_for('deletar', cod_produto=p[0]) }}">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="bi bi-trash-fill"></i> Deletar
+                        </button>
+                    </form>
+                </div> 
             </td>
         </tr>
         {% endfor %}

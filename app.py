@@ -25,5 +25,12 @@ def atualizar(cod_produto):
     models.atualizar_estoque(cod_produto, nova_qtde)
     return redirect(url_for("index"))
 
+
+@app.route("/deletar/<int:cod_produto>", methods=["POST"])
+def deletar(cod_produto):
+    models.desativar_produto(cod_produto)
+    return redirect(url_for("index"))
+
+
 if __name__ == "__main__":
     app.run(debug=True)
