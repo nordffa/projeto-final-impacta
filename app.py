@@ -1,12 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for
 import models
 
+
 app = Flask(__name__)
+
 
 @app.route("/")
 def index():
     produtos = models.listar_produtos()
     return render_template("listar.html", produtos=produtos)
+
 
 @app.route("/cadastrar", methods=["GET", "POST"])
 def cadastrar():
@@ -18,6 +21,7 @@ def cadastrar():
         models.inserir_produto(descricao, valor_unitario, qtde_estoque, fornecedor)
         return redirect(url_for("index"))
     return render_template("cadastrar.html")
+
 
 @app.route("/atualizar/<int:cod_produto>", methods=["POST"])
 def atualizar(cod_produto):

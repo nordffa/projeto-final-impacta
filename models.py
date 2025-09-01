@@ -47,26 +47,17 @@ def atualizar_estoque(cod_produto, nova_qtde):
         conn.close()
 
 
-# NAO ESTÁ SENDO UTILIZADO AINDA
 def desativar_produto(cod_produto):
     """
     Funcao que muda o status do produto para "FALSE" e remove da visualizacao de todos os produtos
     """
     conn = get_connection()
     if conn:
-        try:
             cur = conn.cursor()
-            # O comando agora é um UPDATE para mudar o status da coluna 'ativo'
             cur.execute(
                 "UPDATE produto SET ativo = FALSE WHERE cod_produto = %s",
                 (cod_produto,)
             )
             conn.commit()
-            print("Produto desativado com sucesso!")
-        except Exception as e:
-            conn.rollback()
-            print(f"Ocorreu um erro ao desativar o produto: {e}")
-        finally:
             cur.close()
             conn.close()
-
