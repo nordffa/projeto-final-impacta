@@ -1,5 +1,5 @@
 # Meu Estoque
-Projeto final do módulo "Software Product: Analysis, Specification, Project & Implementation" 
+Projeto final do módulo "Software Product: Analysis, Specification, Project & Implementation" da Faculdade Impacta Tecnologia
 
 ## Dependências
 
