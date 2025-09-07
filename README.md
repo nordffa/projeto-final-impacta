@@ -93,7 +93,7 @@ conn_str = "postgresql://neondb_owner:npg_i3WyNPMKJzn7@ep-proud-rice-ac2xu92h-po
 
 Importante: Para usar este projeto, você precisará substituir npg_i3WyNPMKJzn7 pela sua própria senha de banco de dados e garantir que o banco de dados banco_pystock exista e tenha a tabela produto com a seguinte estrutura:
 
-SQL
+SQL.
 
 
 
