@@ -96,25 +96,7 @@ Importante: Para usar este projeto, você precisará substituir npg_i3WyNPMKJzn7
 SQL
 
 
-CREATE TABLE produto (
-    cod_produto SERIAL PRIMARY KEY,
-    descricao VARCHAR(255) NOT NULL,
-    valor_unitario DECIMAL(10, 2) NOT NULL,
-    qtde_estoque INTEGER NOT NULL,
-    fornecedor VARCHAR(255),
-    ativo BOOLEAN DEFAULT TRUE
-);
 
 
-Execução da Aplicação
 
-Após configurar o banco de dados e instalar as dependências, você pode iniciar a aplicação Flask:
-
-Bash
-
-
-python app.py
-
-
-A aplicação estará disponível em http://127.0.0.1:5000/ no seu navegador.
 
