@@ -1,5 +1,6 @@
 from db import get_connection
 
+
 def inserir_produto(descricao, valor_unitario, qtde_estoque, fornecedor, ativo="TRUE"):
     """
     Funcao que insere produtos no banco de dados
@@ -9,7 +10,7 @@ def inserir_produto(descricao, valor_unitario, qtde_estoque, fornecedor, ativo="
         cur = conn.cursor()
         cur.execute(
             "INSERT INTO produto (descricao, valor_unitario, qtde_estoque, fornecedor, ativo) VALUES (%s, %s, %s, %s, %s)",
-            (descricao, valor_unitario, qtde_estoque, fornecedor, ativo)
+            (descricao, valor_unitario, qtde_estoque, fornecedor, ativo),
         )
         conn.commit()
         cur.close()
@@ -40,7 +41,7 @@ def atualizar_estoque(cod_produto, nova_qtde):
         cur = conn.cursor()
         cur.execute(
             "UPDATE produto SET qtde_estoque = %s WHERE cod_produto = %s",
-            (nova_qtde, cod_produto)
+            (nova_qtde, cod_produto),
         )
         conn.commit()
         cur.close()
@@ -53,14 +54,13 @@ def desativar_produto(cod_produto):
     """
     conn = get_connection()
     if conn:
-            cur = conn.cursor()
-            cur.execute(
-                "UPDATE produto SET ativo = FALSE WHERE cod_produto = %s",
-                (cod_produto,)
-            )
-            conn.commit()
-            cur.close()
-            conn.close()
+        cur = conn.cursor()
+        cur.execute(
+            "UPDATE produto SET ativo = FALSE WHERE cod_produto = %s", (cod_produto,)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
 
 
 def inserir_cliente(nome_completo, cpf, ativo="TRUE"):
@@ -72,7 +72,7 @@ def inserir_cliente(nome_completo, cpf, ativo="TRUE"):
         cur = conn.cursor()
         cur.execute(
             "INSERT INTO cliente (nome_completo, cpf, ativo) VALUES (%s, %s, %s)",
-            (nome_completo, cpf, ativo)
+            (nome_completo, cpf, ativo),
         )
         conn.commit()
         cur.close()
@@ -100,11 +100,10 @@ def desativar_cliente(cod_cliente):
     """
     conn = get_connection()
     if conn:
-            cur = conn.cursor()
-            cur.execute(
-                "UPDATE cliente SET ativo = FALSE WHERE cod_cliente = %s",
-                (cod_cliente,)
-            )
-            conn.commit()
-            cur.close()
-            conn.close()
+        cur = conn.cursor()
+        cur.execute(
+            "UPDATE cliente SET ativo = FALSE WHERE cod_cliente = %s", (cod_cliente,)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
