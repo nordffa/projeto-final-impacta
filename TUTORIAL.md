@@ -5,7 +5,6 @@ Este guia mostra como rodar o projeto 'Meu Estoque' rapidamente.
 ## 1. Pré-requisitos
 
 - Python 3.x
-- PostgreSQL
 
 ## 2. Configuração
 
@@ -29,29 +28,6 @@ pip install -r requirements.txt
 ```
 
 ![Instalar Dependências](https://private-us-east-1.manuscdn.com/sessionFile/9p9KQHvVL8R1bZOmCvQQA5/sandbox/SXXjT9T1HQ0S6BT93A42xH-images_1757378937214_na1fn_L2hvbWUvdWJ1bnR1L3BpcF9pbnN0YWxsX2NvbW1hbmQ.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvOXA5S1FIdlZMOFIxYlpPbUN2UVFBNS9zYW5kYm94L1NYWGpUOVQxSFEwUzZCVDkzQTQyeEgtaW1hZ2VzXzE3NTczNzg5MzcyMTRfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzQnBjRjlwYm5OMFlXeHNYMk52YlcxaGJtUS5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=LPkztiuxeUAoDq54JO2Tvj1xc14KXPLHmSUjaw-YZgYxWvEgWbBXvQCp1iRp1qdIQqAAaeaDQNYpuup6TwonJt8gRZPiP-RZqtIPso7EXKfyEeu25-DBqUB1KkA4Sqmvs7mdbSSMgTHGZ0F-icGJ19A-VPGr30BCCZBKpuLFaipUUy4OKkqnUgY8pp2YMS4qP-zLQgX9FWTjkLem2Froo~py-RNANvtnFJJ~Mmt5ji7TOxfqf1iETfJlStT9s3KwQQPzzQIiQyY-N2UwIkcEZ~w0nAxDhvmUHtsUjqJGE1m-EiziJUOKZhV~EAjzaclaZhLf96uK8~lzMCv0DzTgBg__)
-
-### 2.3. Configurar Banco de Dados
-
-Edite `db.py` com sua string de conexão PostgreSQL. Exemplo:
-
-```python
-conn_str = "postgresql://seu_usuario:sua_senha@seu_host:sua_porta/seu_banco?sslmode=require"
-```
-
-Crie a tabela `produto` no seu banco de dados:
-
-```sql
-CREATE TABLE produto (
-    id SERIAL PRIMARY KEY,
-    descricao VARCHAR(255) NOT NULL,
-    valor_unitario DECIMAL(10, 2) NOT NULL,
-    quantidade_estoque INTEGER NOT NULL,
-    fornecedor VARCHAR(255),
-    ativo BOOLEAN DEFAULT TRUE
-);
-```
-
-![Configuração do Banco de Dados](https://private-us-east-1.manuscdn.com/sessionFile/9p9KQHvVL8R1bZOmCvQQA5/sandbox/SXXjT9T1HQ0S6BT93A42xH-images_1757378937215_na1fn_L2hvbWUvdWJ1bnR1L2RhdGFiYXNlX2NvbmZpZw.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvOXA5S1FIdlZMOFIxYlpPbUN2UVFBNS9zYW5kYm94L1NYWGpUOVQxSFEwUzZCVDkzQTQyeEgtaW1hZ2VzXzE3NTczNzg5MzcyMTVfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwyUmhkR0ZpWVhObFgyTnZibVpwWncucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=F4MQPPwpqa1gtCF~vGxK7O4TOdIutLNrqAYrMoTCMOqjmo36FVeAIsZZLakHiL3~1htKefZnLJyF5iBqdwpV5LeHZXaEP8CBPjbYa3kc5WxGLRsGgt3-KnY29Hyhe7tYLjkKT0k6L~nU3r1JbmOFpIVwJUPCp11BRu1kUH8L0SFpkj2-9hQpASR3xbNzk7u22CKyaSHJYwKZOBbTnrWcZ92gHLc2zbpXSNBq404o-6Ys7VvFisO7xPtBD4tG2LRCUtp-Qc~wOxTwTzg2rQlRMO6wuL2jOwTXrtHY9Xp8t57WNYtRv2fZrkEMPV~q~scXZ71Q7xxcH6PIDuiXpJI9Cg__)
 
 ## 3. Execução
 
