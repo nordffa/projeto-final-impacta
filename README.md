@@ -14,7 +14,7 @@
 Link: 
 
 ## Documentação
-<a href="" target="_blank">Como Rodar o Projeto</a>
+<a href="https://github.com/nordffa/projeto-final-impacta/blob/main/como%20rodar%20meu%20estoque" target="_blank">Como Rodar o Projeto</a>
 
 ## Telas
 
