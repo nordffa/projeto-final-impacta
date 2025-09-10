@@ -36,5 +36,20 @@ def deletar(cod_produto):
     return redirect(url_for("index"))
 
 
+@app.route("/clientes", methods=["GET", "POST"])
+def clientes():
+    pass
+
+
+@app.route("/atualizar_cliente/<int:cod_cliente>", methods=["POST"])
+def atualizar_cliente(cod_cliente):
+    pass
+
+
+@app.route("/deletar_cliente/<int:cod_cliente>", methods=["POST"])
+def deletar_cliente(cod_cliente):
+    pass
+
+
 if __name__ == "__main__":
     app.run(debug=True)
