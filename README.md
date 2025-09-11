@@ -19,6 +19,8 @@ Link:
 <a href="https://docs.google.com/document/d/1h6-zxGc2JDp2X-lIJJK4LIyirM9cmFceSaaLQiXtJqk/" target="_blank">Manual do Usuário</a>
 
 ## Interface
+tela produtos<img width="1641" height="705" alt="image" src="https://github.com/user-attachments/assets/26b0b92a-809f-492c-91a4-aaa012cf235c" />
+tela cadastrar<img width="1626" height="570" alt="image" src="https://github.com/user-attachments/assets/b1d50035-a4ae-462f-abca-ee57eaa6f11c" />
 
 
 ## Autores
