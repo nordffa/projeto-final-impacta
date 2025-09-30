@@ -39,7 +39,9 @@
         {% endfor %}
     </tbody>
 </table>
-{% if not produtos %}
+{# --- LÓGICA CORRIGIDA ABAIXO --- #}
+{% if not clientes %}
 <div class="alert alert-warning">Nenhum cliente cadastrado ainda!</div>
 {% endif %}
+
 {% endblock %}
