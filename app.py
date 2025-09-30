@@ -48,7 +48,8 @@ def deletar(cod_produto):
 
 @app.route("/clientes", methods=["GET", "POST"])
 def clientes():
-    return render_template("listar_cliente.html")
+    clientes = models.listar_clientes()
+    return render_template("listar_cliente.html", clientes=clientes)
 
 
 @app.route("/atualizar_cliente/<int:cod_cliente>", methods=["POST"])
