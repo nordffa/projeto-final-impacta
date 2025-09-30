@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>📋 Lista de Produtos</h2>
+    <h2>📋 Lista de Clientes</h2>
     <a href="{{ url_for('cadastrar') }}" class="btn btn-primary">➕ Novo Cliente</a>
 </div>
 
@@ -9,21 +9,17 @@
     <thead class="table-dark">
         <tr>
             <th>Código</th>
-            <th>Descrição</th>
-            <th>Valor Unitário</th>
-            <th>Estoque</th>
-            <th>Fornecedor</th>
+            <th>Nome Completo</th>
+            <th>CPF</th>
             <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-        {% for p in produtos %}
+        {% for p in clientes %}
         <tr>
             <td>{{ p[0] }}</td>
             <td>{{ p[1] }}</td>
-            <td>R$ {{ "%.2f"|format(p[2]) }}</td>
-            <td>{{ p[3] }}</td>
-            <td>{{ p[4] }}</td>
+            <td>{{ p[2] }}</td>
             <td>
                 <div class="d-flex">
                     <form method="post" action="{{ url_for('atualizar', cod_produto=p[0]) }}" class="me-2 d-flex">
@@ -44,6 +40,6 @@
     </tbody>
 </table>
 {% if not produtos %}
-<div class="alert alert-warning">Nenhum produto cadastrado ainda!</div>
+<div class="alert alert-warning">Nenhum cliente cadastrado ainda!</div>
 {% endif %}
 {% endblock %}
