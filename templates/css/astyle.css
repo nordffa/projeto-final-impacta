@@ -1,0 +1,96 @@
+   body {
+      overflow-x: hidden;
+    }
+
+    /* Sidebar */
+    #sidebar {
+      width: 250px;
+      min-width: 250px;
+      max-width: 250px;
+      background: #343a40;
+      color: #fff;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: all 0.3s;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    #sidebar.collapsed {
+      margin-left: -250px;
+    }
+
+    #sidebar .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 1px solid #495057;
+    }
+
+    #sidebar .menu-item a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #sidebar .menu-item a:hover {
+      background: #495057;
+    }
+
+    #sidebar .submenu {
+      display: none;
+      flex-direction: column;
+      padding-left: 1rem;
+    }
+
+    #sidebar .menu-item.open .submenu {
+      display: flex;
+    }
+
+    main {
+      margin-left: 250px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    #sidebar.collapsed ~ main {
+      margin-left: 0;
+    }
+
+    /* os dois controla o botão menu, e o hover vai ocultar*/
+    #toggleSidebar {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 999;
+      background-color: #343a40; 
+      border: none;               
+      color: #fff;                
+   }
+
+   #toggleSidebar:hover {
+    background-color: #49505749;  
+   }
+
+    @media (max-width: 768px) {
+      #sidebar {
+        margin-left: -250px;
+      }
+      #sidebar.collapsed {
+        margin-left: 0;
+      }
+      main {
+        margin-left: 0;
+      }
+      #sidebar.collapsed ~ main {
+        margin-left: 250px;
+      }
+    }

@@ -1,28 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Estoque - Gerenciamento de Estoque</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <title>Meu Estoque - ERP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    #sidebar {
+      width: 250px;
+      min-width: 250px;
+      max-width: 250px;
+      background: #343a40;
+      color: #fff;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: all 0.3s;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    #sidebar.collapsed {
+      margin-left: -250px;
+    }
+
+    #sidebar .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 1px solid #495057;
+    }
+
+    #sidebar .menu-item a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #sidebar .menu-item a:hover {
+      background: #495057;
+    }
+
+    #sidebar .submenu {
+      display: none;
+      flex-direction: column;
+      padding-left: 1rem;
+    }
+
+    #sidebar .menu-item.open .submenu {
+      display: flex;
+    }
+
+
+    main {
+      margin-left: 250px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    #sidebar.collapsed ~ main {
+      margin-left: 0;
+    }
+
+    #toggleSidebar {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 999;
+      background-color: #343a40; 
+      border: none;               
+      color: #fff;                
+   }
+
+   #toggleSidebar:hover {
+    background-color: #49505749;  
+   }
+
+    @media (max-width: 768px) {
+      #sidebar {
+        margin-left: -250px;
+      }
+      #sidebar.collapsed {
+        margin-left: 0;
+      }
+      main {
+        margin-left: 0;
+      }
+      #sidebar.collapsed ~ main {
+        margin-left: 250px;
+      }
+    }
+  </style>
 </head>
-<body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url_for('index') }}">📦 Meu Estoque</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Produtos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('cadastrar') }}">Cadastrar</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <main class="container">
-        {% block content %}{% endblock %}
-    </main>
+<!-- button menu visível -->
+<button id="toggleSidebar" class="btn btn-primary">
+  <i class="bi bi-list"></i>
+</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- não é o navbar, parece mas usei o sidebar -->
+<div id="sidebar">
+  <div class="header">
+    <a class="navbar-brand text-white" href="{{ url_for('index') }}">📦 Meu Estoque</a>
+  </div>
+
+  <div class="menu-item">
+    <a href="#"><i class="bi bi-box-seam" > </i> Produtos <i class="bi bi-chevron-down ms-auto"></i></a>
+    <div class="submenu">
+      <a href="{{ url_for('cadastrar') }}">➕Cadastrar Produto</a>
+      <a href="{{ url_for('listar') }}">🟰Listar Produtos</a>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <a href="#"><i class="bi bi-truck"> </i> Fornecedores <i class="bi bi-chevron-down ms-auto"></i></a>
+    <div class="submenu">
+      <a href="{{ url_for('fornecedor_cadastrar') }}">Cadastrar Fornecedor</a>
+    </div>
+  </div>
+
+
+  <div class="menu-item">
+    <a href="#"><i class="bi bi-people"> </i> Clientes <i class="bi bi-chevron-down ms-auto"></i></a>
+    <div class="submenu">
+      <a href="{{ url_for('clientes') }}">Cadastrar Cliente</a>
+    </div>
+  </div>
+
+</div>
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // javascript do menu para clicar
+  const sidebar = document.getElementById('sidebar');
+  const toggleBtn = document.getElementById('toggleSidebar');
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+  });
+
+  // javascript do submenu, dentro do menu
+  const menuItems = document.querySelectorAll('#sidebar .menu-item > a');
+  menuItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = item.parentElement;
+      parent.classList.toggle('open');
+    });
+  });
+</script>
+
 </body>
 </html>
