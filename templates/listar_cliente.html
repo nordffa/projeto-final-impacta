@@ -21,7 +21,7 @@
             <td>{{ p[1] }}</td>
             <td>{{ p[2] }}</td>
             <td>
-                    <form method="post" action="{{ url_for('deletar', cod_produto=p[0]) }}">
+                    <form method="post" action="{{ url_for('deletar_cliente', cod_cliente=p[0]) }}">
                         <button type="submit" class="btn btn-danger">
                             <i class="bi bi-trash-fill"></i> Deletar
                         </button>
@@ -36,6 +36,4 @@
 {% if not clientes %}
 <div class="alert alert-warning">Nenhum cliente cadastrado ainda!</div>
 {% endif %}
-
 {% endblock %}
-tess testes

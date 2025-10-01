@@ -59,7 +59,8 @@ def atualizar_cliente(cod_cliente):
 
 @app.route("/deletar_cliente/<int:cod_cliente>", methods=["POST"])
 def deletar_cliente(cod_cliente):
-    pass
+    models.desativar_cliente(cod_cliente)
+    return redirect(url_for("clientes"))
 
 
 if __name__ == "__main__":
