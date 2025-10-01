@@ -2,7 +2,7 @@
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>📋 Lista de Clientes</h2>
-    <a href="{{ url_for('cadastrar') }}" class="btn btn-primary">➕ Novo Cliente</a>
+    <a href="{{ url_for('cadastrar_cliente') }}" class="btn btn-primary">➕ Novo Cliente</a>
 </div>
 
 <table class="table table-striped table-hover shadow-sm">
@@ -21,7 +21,7 @@
             <td>{{ p[1] }}</td>
             <td>{{ p[2] }}</td>
             <td>
-                    <form method="post" action="{{ url_for('deletar', cod_produto=p[0]) }}">
+                    <form method="post" action="{{ url_for('deletar_cliente', cod_cliente=p[0]) }}">
                         <button type="submit" class="btn btn-danger">
                             <i class="bi bi-trash-fill"></i> Deletar
                         </button>
@@ -36,6 +36,8 @@
 {% if not clientes %}
 <div class="alert alert-warning">Nenhum cliente cadastrado ainda!</div>
 {% endif %}
-
 {% endblock %}
+<<<<<<< HEAD
 test
+=======
+>>>>>>> c58ae1fdebb6d5c8efda8636d59f96078d666fd0
