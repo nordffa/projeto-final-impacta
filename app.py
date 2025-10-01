@@ -46,6 +46,8 @@ def deletar(cod_produto):
     return redirect(url_for("index"))
 
 
+# CLIENTES
+
 @app.route("/clientes", methods=["GET", "POST"])
 def clientes():
     clientes = models.listar_clientes()
@@ -61,6 +63,15 @@ def atualizar_cliente(cod_cliente):
 def deletar_cliente(cod_cliente):
     models.desativar_cliente(cod_cliente)
     return redirect(url_for("clientes"))
+
+@app.route("/cadastrar_cliente", methods=["GET", "POST"])
+def cadastrar_cliente():
+    if request.method == "POST":
+        nome_completo = request.form["nome_completo"]
+        cpf = request.form["cpf"]
+        models.inserir_cliente(nome_completo, cpf)
+        return redirect(url_for("clientes"))
+    return render_template("cadastrar_cliente.html")
 
 
 if __name__ == "__main__":
