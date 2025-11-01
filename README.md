@@ -1,6 +1,6 @@
 # Meu Estoque: Sistema de Gerenciamento de Produtos
 
-> Status: AC1 concluída ✔️
+> Status: AC2 concluída ✔️
 
 ### Projeto desenvolvido como trabalho final para o módulo "Software Product: Analysis, Specification, Project & Implementation" da Faculdade Impacta Tecnologia
 
