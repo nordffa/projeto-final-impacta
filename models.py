@@ -147,7 +147,7 @@ def listar_fornecedores():
 
 def desativar_fornecedor(cod_fornecedor):
     """
-    Funcao que muda o status do fornecedor para "FALSE" e remove da visualizacao de todos os clientes
+    Funcao que muda o status do fornecedor para "FALSE" e remove da visualizacao de todos os fornecedores
     """
     conn = get_connection()
     if conn:
