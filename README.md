@@ -16,7 +16,7 @@ Link:
 
 ## Documentação
 <a href="https://github.com/nordffa/projeto-final-impacta/blob/main/TUTORIAL.md" target="_blank">Como Rodar o Projeto</a><br>
-<a href="https://docs.google.com/document/d/1h6-zxGc2JDp2X-lIJJK4LIyirM9cmFceSaaLQiXtJqk/" target="_blank">Manual do Usuário</a>
+<a href="https://1drv.ms/w/c/b77e0fbb032347ff/EX2l9FpKZdFEs6aZbmx1d3gBCaK_QFnXW0OaL4GDRmlLWQ?e=1tLcvZ" target="_blank">Manual do Usuário</a>
 
 ## Interface
 Lista de Produtos (Tela Inicial)<img width="1641" height="705" alt="image" src="https://github.com/user-attachments/assets/26b0b92a-809f-492c-91a4-aaa012cf235c" />
