@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>📋 Lista de FORNECEDOR</h2>
+        <a href="{{ url_for('cadastrar') }}" class="btn btn-primary">➕ Novo Produto</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Valor Unitário</th>
+                    <th>Estoque</th>
+                    <th>Fornecedor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in produtos %}
+                <tr>
+                    <td>{{ p[0] }}</td>
+                    <td>{{ p[1] }}</td>
+                    <td>R$ {{ "%.2f"|format(p[2]) }}</td>
+                    <td>{{ p[3] }}</td>
+                    <td>{{ p[4] }}</td>
+                    <td>
+                        <div class="d-flex flex-wrap gap-2">
+                            <form method="post" action="{{ url_for('atualizar', cod_produto=p[0]) }}" class="d-flex gap-2">
+                                <input type="number" name="qtde_estoque" placeholder="Nova Qtde" class="form-control" style="width: 120px;">
+                                <button type="submit" class="btn btn-sm btn-success">
+                                    <i class="bi bi-arrow-clockwise"></i> Atualizar
+                                </button>
+                            </form>
+                            <form method="post" action="{{ url_for('deletar', cod_produto=p[0]) }}">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="bi bi-trash-fill"></i> Deletar
+                                </button>
+                            </form>
+                        </div> 
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if not produtos %}
+        <div class="alert alert-warning">Nenhum produto cadastrado ainda!</div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
