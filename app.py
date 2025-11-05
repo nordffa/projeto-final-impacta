@@ -69,8 +69,9 @@ def cadastrar_cliente():
 @app.route("/fornecedor/cadastrar", methods=["GET", "POST"])
 def fornecedor_cadastrar():
     if request.method == "POST":
-        nome = request.form["nome"]
-        cnpj = request.form["cpf"]        
+        nome_fantasia = request.form["nome_fantasia"]
+        razao_social = request.form["razao_social"]
+        cnpj = request.form["cnpj"]
         return redirect(url_for("index"))
     return render_template("fornecedor_cadastrar.html")
 

@@ -7,8 +7,12 @@
             <h2 class="card-title mb-4">➕ Cadastrar Fornecedor</h2>
             <form method="post">
                 <div class="mb-3">
-                    <label class="form-label">Nome do Fornecedor</label>
-                    <input type="text" name="nome" class="form-control" required>
+                    <label class="form-label">Nome Fantasia</label>
+                    <input type="text" name="nome_fantasia" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Razão Social</label>
+                    <input type="text" name="razao_social" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">CNPJ</label>
@@ -16,7 +20,7 @@
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="{{ url_for('index') }}" class="btn btn-secondary">Voltar</a>
+                <a href="#" class="btn btn-secondary">Voltar</a>
             </form>
         </div>
     </div>
