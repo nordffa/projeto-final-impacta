@@ -20,7 +20,7 @@ Link:
 
 ## Interface
 Lista de Produtos (Tela Inicial)<img width="1365" height="681" alt="Image" src="https://github.com/user-attachments/assets/4963e952-7243-4b2f-a807-94901637febd" />
-Cadastro de Produtos<img width="1626" height="570" alt="image" src="https://github.com/user-attachments/assets/b1d50035-a4ae-462f-abca-ee57eaa6f11c" />
+Cadastro de Produto<img width="1365" height="512" alt="Image" src="https://github.com/user-attachments/assets/e3feeb82-def2-49b4-9d94-bc2e37883060" />
 
 
 ## Autores
