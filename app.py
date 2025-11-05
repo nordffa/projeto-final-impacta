@@ -74,5 +74,12 @@ def fornecedor_cadastrar():
         return redirect(url_for("index"))
     return render_template("fornecedor_cadastrar.html")
 
+
+@app.route("/fornecedores", methods=["GET", "POST"])
+def fornecedores():
+    fornecedores = models.listar_fornecedores()
+    return render_template("lista_fornecedor.html", fornecedores=fornecedores)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
