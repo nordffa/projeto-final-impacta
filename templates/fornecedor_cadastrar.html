@@ -1,29 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="container mt-4">
-    <div class="card shadow-sm">
-        <div class="card-body">
-            <h2 class="card-title mb-4">➕ Cadastrar Fornecedor</h2>
-            <form method="post">
-                <div class="mb-3">
-                    <label class="form-label">Nome Fantasia</label>
-                    <input type="text" name="nome_fantasia" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Razão Social</label>
-                    <input type="text" name="razao_social" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">CNPJ</label>
-                    <input type="text" name="cnpj" class="form-control" required>
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="#" class="btn btn-secondary">Voltar</a>
-            </form>
-        </div>
-    </div>
-</div>
+    <h2>➕ Cadastrar Fornecedor</h2>
 
+    <form method="post" class="mt-3">
+        <div class="mb-3">
+            <label for="nome_fantasia" class="form-label">Nome Fantasia</label>
+            <input type="text" id="nome_fantasia" name="nome_fantasia" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="razao_social" class="form-label">Razão Social</label>
+            <input type="text" id="razao_social" name="razao_social" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="cnpj" class="form-label">CNPJ</label>
+            <input type="text" id="cnpj" name="cnpj" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="{{ url_for('fornecedores') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
 {% endblock %}

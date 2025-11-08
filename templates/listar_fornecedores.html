@@ -12,39 +12,31 @@
                 <tr>
                     <th>Código</th>
                     <th>Nome Fantasia</th>
-                    <th>Razao Social</th>
+                    <th>Razão Social</th>
                     <th>CNPJ</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-                {% for p in produtos %}
+                {% for f in fornecedores %}
                 <tr>
-                    <td>{{ p[0] }}</td>
-                    <td>{{ p[1] }}</td>
-                    <td>R$ {{ "%.2f"|format(p[2]) }}</td>
-                    <td>{{ p[3] }}</td>
-                    <td>{{ p[4] }}</td>
+                    <td>{{ f[0] }}</td>
+                    <td>{{ f[1] }}</td>
+                    <td>{{ f[2] }}</td>
+                    <td>{{ f[3] }}</td>
                     <td>
-                        <div class="d-flex flex-wrap gap-2">
-                            <form method="post" action="{{ url_for('atualizar', cod_produto=p[0]) }}" class="d-flex gap-2">
-                                <input type="number" name="qtde_estoque" placeholder="Nova Qtde" class="form-control" style="width: 120px;">
-                                <button type="submit" class="btn btn-sm btn-success">
-                                    <i class="bi bi-arrow-clockwise"></i> Atualizar
-                                </button>
-                            </form>
-                            <form method="post" action="{{ url_for('deletar', cod_produto=p[0]) }}">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="bi bi-trash-fill"></i> Deletar
-                                </button>
-                            </form>
-                        </div> 
+                        <form method="post" action="{{ url_for('deletar_fornecedor', cod_fornecedor=f[0]) }}">
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash-fill"></i> Deletar
+                            </button>
+                        </form>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-        {% if not produtos %}
+
+        {% if not fornecedores %}
         <div class="alert alert-warning">Nenhum fornecedor cadastrado ainda!</div>
         {% endif %}
     </div>

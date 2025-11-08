@@ -94,3 +94,67 @@
         margin-left: 250px;
       }
     }
+
+body.login-bg {
+  background: linear-gradient(135deg, #0d6efd, #003366);
+}
+
+/* cartão principal */
+.login-card {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+}
+
+/* imagem de login */
+.login-image {
+  display: flex;
+  justify-content: center;
+}
+
+.login-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* inputs */
+.form-control {
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+/* botão */
+.btn-primary {
+  border-radius: 10px;
+  background-color: #0d6efd;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0048b3;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 576px) {
+  .login-card {
+    padding: 2rem;
+  }
+  .login-image {
+    max-width: 120px;
+  }
+}
+
+.login-bg {
+  background: url("../img/login_wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
