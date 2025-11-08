@@ -21,8 +21,8 @@ Link:
 ## Interface
 Lista de Produtos (Tela Inicial) <img width="1365" height="681" alt="Image" src="https://github.com/user-attachments/assets/4963e952-7243-4b2f-a807-94901637febd" />
 Cadastro de Produtos<img width="1361" height="524" alt="Image" src="https://github.com/user-attachments/assets/5aa06732-aa52-43b4-a2c9-b480b068ff12" />
-<img width="1364" height="473" alt="Image" src="https://github.com/user-attachments/assets/5182e4c8-beea-4544-aadf-483146809245" />
-<img width="1365" height="430" alt="Image" src="https://github.com/user-attachments/assets/077edbde-c346-4d83-b38e-0e9b0baf2da8" />
+Cadastrar Cliente<img width="1364" height="473" alt="Image" src="https://github.com/user-attachments/assets/5182e4c8-beea-4544-aadf-483146809245" />
+Lista de Cliente<img width="1365" height="430" alt="Image" src="https://github.com/user-attachments/assets/077edbde-c346-4d83-b38e-0e9b0baf2da8" />
 <img width="1365" height="428" alt="Image" src="https://github.com/user-attachments/assets/f8db5d2f-f780-4f5b-bc7e-5f3ab88ae566" />
 
 ## Autores
