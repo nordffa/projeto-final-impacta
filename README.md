@@ -19,8 +19,8 @@ Link:
 <a href="https://1drv.ms/w/c/b77e0fbb032347ff/EX2l9FpKZdFEs6aZbmx1d3gBCaK_QFnXW0OaL4GDRmlLWQ?e=1tLcvZ" target="_blank">Manual do Usuário</a>
 
 ## Interface
-Lista de Produtos (Tela Inicial)<img width="1641" height="705" alt="image" src="https://github.com/user-attachments/assets/26b0b92a-809f-492c-91a4-aaa012cf235c" />
-Cadastro de Produtos<img width="1626" height="570" alt="image" src="https://github.com/user-attachments/assets/b1d50035-a4ae-462f-abca-ee57eaa6f11c" />
+Lista de Produtos (Tela Inicial)<img width="1365" height="681" alt="Image" src="https://github.com/user-attachments/assets/4963e952-7243-4b2f-a807-94901637febd" />
+Cadastro de Produto<img width="1365" height="512" alt="Image" src="https://github.com/user-attachments/assets/e3feeb82-def2-49b4-9d94-bc2e37883060" />
 
 
 ## Autores
