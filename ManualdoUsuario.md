@@ -43,6 +43,7 @@ Na tela inicial de produtos, você encontrará uma tabela organizada com os segu
 > Dica: Para adicionar um novo produto rapidamente, clique no botão + Novo Produto no canto superior direito.  
 
 ## Tela – Cadastrar Produto  
+<img width="1361" height="524" alt="Image" src="https://github.com/user-attachments/assets/5aa06732-aa52-43b4-a2c9-b480b068ff12" />
 Utilize esta tela para registrar novos itens no seu estoque.  
 
 #### Campos de Cadastro de Produto  
