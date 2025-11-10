@@ -72,6 +72,8 @@ Nesta tela, você pode registrar as informações de um novo fornecedor.
 Após o preenchimento, clique em Salvar para confirmar o cadastro ou em Voltar para retornar à lista
 
 ## Tela - Lista de Clientes  
+<img width="1365" height="430" alt="Image" src="https://github.com/user-attachments/assets/077edbde-c346-4d83-b38e-0e9b0baf2da8" />
+
 - Código: Identificação do Fornecedor ou Cliente.
 - Nome completo: Nome completo do cliente.  
 - Cpf: CPF do cliente.  
