@@ -22,6 +22,9 @@ O acesso às principais áreas do sistema é feito através do Menu Lateral Esqu
 - Sub-menu: Cadastrar (permite a inserção de um novo cliente no sistema).  
 
 ## Tela – Lista de Produtos  
+
+<img width="1365" height="681" alt="Image" src="https://github.com/user-attachments/assets/4963e952-7243-4b2f-a807-94901637febd" />
+
 Na tela inicial de produtos, você encontrará uma tabela organizada com os seguintes campos:  
 
 - Código: número identificador do produto.  
