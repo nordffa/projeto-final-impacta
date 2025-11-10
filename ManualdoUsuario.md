@@ -55,9 +55,13 @@ Utilize esta tela para registrar novos itens no seu estoque.
 Após preencher todos os campos, clique em Salvar para registrar o produto. Se não quiser salvar, clique em Voltar para retornar à lista de produtos.  
 
 ## Tela – Lista de Fornecedores  
+<img width="1365" height="428" alt="Image" src="https://github.com/user-attachments/assets/f8db5d2f-f780-4f5b-bc7e-5f3ab88ae566" />
+
 Nesta tela, você encontra as informações dos fornecedores.  
 
 ## Tela – Cadastrar Fornecedor  
+<img width="1365" height="463" alt="Image" src="https://github.com/user-attachments/assets/5912370c-c04d-474c-b32c-af27b5e1baa8" />
+
 Nesta tela, você pode registrar as informações de um novo fornecedor.  
 
 #### Campos disponíveis:  
