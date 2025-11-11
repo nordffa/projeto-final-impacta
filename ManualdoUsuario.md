@@ -1,6 +1,6 @@
 # Manual do Usuário – Meu Estoque  
 
-##<img width="249" height="481" alt="Image" src="https://github.com/user-attachments/assets/d517c953-f599-489b-8f16-1991b94444b1" />
+#<img width="249" height="481" alt="Image" src="https://github.com/user-attachments/assets/d517c953-f599-489b-8f16-1991b94444b1" />
 
 ## Introdução  
 O Meu Estoque é um sistema de gestão completo, desenvolvido para otimizar o 
