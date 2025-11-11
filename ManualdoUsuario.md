@@ -1,14 +1,14 @@
 # Manual do Usuário – Meu Estoque  
 
-<img width="249" height="481" alt="Image" src="https://github.com/user-attachments/assets/d517c953-f599-489b-8f16-1991b94444b1" />
-
 ## Introdução  
 O Meu Estoque é um sistema de gestão completo, desenvolvido para otimizar o 
 controle de Produtos, Fornecedores e Clientes. Com ele, você pode cadastrar, 
 visualizar, atualizar e gerenciar todas as informações essenciais do seu negócio de 
 forma prática e rápida.  
 
-## Navegação Principal (Menu Lateral)  
+## Navegação Principal (Menu Lateral) 
+<img width="249" height="481" alt="Image" src="https://github.com/user-attachments/assets/d517c953-f599-489b-8f16-1991b94444b1" />
+
 O acesso às principais áreas do sistema é feito através do Menu Lateral Esquerdo, garantindo uma navegação organizada.  
 
 #### Produtos: O módulo central para controle de inventário.  
