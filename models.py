@@ -64,6 +64,21 @@ def desativar_produto(cod_produto):
         conn.close()
 
 
+def listar_produtos_para_comprar():
+    """
+    Funcao que lista todos os produtos do estoque que tem quantidade igual ou menor do que 10
+    """
+    conn = get_connection()
+    produtos = []
+    if conn:
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM produto WHERE ativo = TRUE AND qtde_estoque <= 10 ORDER BY cod_produto")
+        produtos = cur.fetchall()
+        cur.close()
+        conn.close()
+    return produtos
+
+
 # CLIENTES
 def inserir_cliente(nome_completo, cpf, ativo="TRUE"):
     """
