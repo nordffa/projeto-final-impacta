@@ -2,8 +2,7 @@
 {% block content %}
 <div class="container-fluid p-0">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2>📋 TESTE COMPRAR </h2>
-        <a href="{{ url_for('comprar') }}" class="btn btn-primary">➕ Novo Produto</a>
+        <h2>📋 Produtos em Baixa </h2>
     </div>
 
     <div class="table-responsive">
@@ -15,7 +14,6 @@
                     <th>Valor Unitário</th>
                     <th>Estoque</th>
                     <th>Fornecedor</th>
-                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,21 +23,8 @@
                     <td>{{ p[1] }}</td>
                     <td>R$ {{ "%.2f"|format(p[2]) }}</td>
                     <td>{{ p[3] }}</td>
-                    <td>{{ p[4] }}</td>
                     <td>
-                        <div class="d-flex flex-wrap gap-2">
-                            <form method="post" action="{{ url_for('atualizar', cod_produto=p[0]) }}" class="d-flex gap-2">
-                                <input type="number" name="qtde_estoque" placeholder="Nova Qtde" class="form-control" style="width: 120px;">
-                                <button type="submit" class="btn btn-sm btn-success">
-                                    <i class="bi bi-arrow-clockwise"></i> Atualizar
-                                </button>
-                            </form>
-                            <form method="post" action="{{ url_for('deletar', cod_produto=p[0]) }}">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="bi bi-trash-fill"></i> Deletar
-                                </button>
-                            </form>
-                        </div> 
+
                     </td>
                 </tr>
                 {% endfor %}
