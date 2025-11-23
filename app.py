@@ -73,6 +73,13 @@ def listar():
     return render_template("listar.html", produtos=produtos)
 
 
+@app.route("/comprar")
+@login_required
+def comprar():
+    produtos = models.listar_produtos_para_comprar()
+    return render_template("lista_produtoComprar.html", produtos=produtos)
+
+
 @app.route("/cadastrar", methods=["GET", "POST"])
 @login_required
 def cadastrar():
