@@ -41,7 +41,7 @@ def atualizar_estoque(cod_produto, nova_qtde):
     if conn:
         cur = conn.cursor()
         cur.execute(
-            "UPDATE produto SET qtde_estoque = %s WHERE cod_produto = %s",
+            "UPDATE produto SET qtde_estoque = qtde_estoque + %s WHERE cod_produto = %s;",
             (nova_qtde, cod_produto),
         )
         conn.commit()
@@ -62,6 +62,8 @@ def desativar_produto(cod_produto):
         conn.commit()
         cur.close()
         conn.close()
+
+        
 
 
 def listar_produtos_para_comprar():
