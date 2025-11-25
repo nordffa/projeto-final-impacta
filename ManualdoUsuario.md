@@ -12,7 +12,8 @@ forma prática e rápida.
 O acesso às principais áreas do sistema é feito através do Menu Lateral Esquerdo, garantindo uma navegação organizada.  
 
 #### Produtos: O módulo central para controle de inventário.  
-- Sub-menu: Leva diretamente à Lista de Produtos cadastrados.  
+- Sub-menu: Leva diretamente à Lista de Produtos cadastrados.
+- Sub-menu: Leva diretamente à Lista de Produtos em baixa.  
 - Sub-menu: Cadastrar (permite a inclusão de um novo produto no estoque).  
 
 #### Fornecedores: Módulo para gerenciar a lista de empresas e pessoas que fornecem seus produtos.  
