@@ -7,7 +7,7 @@ visualizar, atualizar e gerenciar todas as informações essenciais do seu negó
 forma prática e rápida.  
 
 ## Navegação Principal (Menu Lateral) 
-<img width="249" height="481" alt="Image" src="https://github.com/user-attachments/assets/d517c953-f599-489b-8f16-1991b94444b1" />
+<img width="251" height="534" alt="Image" src="https://github.com/user-attachments/assets/495d7eae-1aee-464e-9416-8ab3c7c95140" />
 
 O acesso às principais áreas do sistema é feito através do Menu Lateral Esquerdo, garantindo uma navegação organizada.  
 
