@@ -19,9 +19,9 @@
 
 #### Cadastro de Produtos<img width="1361" height="524" alt="Image" src="https://github.com/user-attachments/assets/5aa06732-aa52-43b4-a2c9-b480b068ff12" />
 
-#### Cadastrar Cliente<img width="1364" height="473" alt="Image" src="https://github.com/user-attachments/assets/5182e4c8-beea-4544-aadf-483146809245" />
-
 #### Produdos em Baixa  <img width="1364" height="393" alt="Image" src="https://github.com/user-attachments/assets/e5a0199c-ac40-4950-a00c-de21deb001ad" />
+
+#### Cadastrar Cliente<img width="1364" height="473" alt="Image" src="https://github.com/user-attachments/assets/5182e4c8-beea-4544-aadf-483146809245" />
 
 #### Lista de Cliente<img width="1365" height="430" alt="Image" src="https://github.com/user-attachments/assets/077edbde-c346-4d83-b38e-0e9b0baf2da8" />
 
