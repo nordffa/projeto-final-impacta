@@ -53,7 +53,10 @@ Utilize esta tela para registrar novos itens no seu estoque.
 - Descrição: Nome completo do produto (ex: Sabão Líquido, Coca-Cola 2L).  
 - Valor Unitário: Preço de venda do produto.  
 - Quantidade em Estoque: Quantidade inicial disponível ao cadastrar.  
-- Fornecedor: Nome do fornecedor responsável.  
+- Fornecedor: Nome do fornecedor responsável.
+
+## Tela - Lista de Produtos em Baixa 
+ <img width="1364" height="393" alt="Image" src="https://github.com/user-attachments/assets/e5a0199c-ac40-4950-a00c-de21deb001ad" />
 
 Após preencher todos os campos, clique em Salvar para registrar o produto. Se não quiser salvar, clique em Voltar para retornar à lista de produtos.  
 
