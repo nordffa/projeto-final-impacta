@@ -54,11 +54,13 @@ Utilize esta tela para registrar novos itens no seu estoque.
 - Valor Unitário: Preço de venda do produto.  
 - Quantidade em Estoque: Quantidade inicial disponível ao cadastrar.  
 - Fornecedor: Nome do fornecedor responsável.
+- Após preencher todos os campos, clique em Salvar para registrar o produto. Se não quiser salvar, clique em Voltar para retornar à lista de produtos.  
 
 ## Tela - Lista de Produtos em Baixa 
  <img width="1364" height="393" alt="Image" src="https://github.com/user-attachments/assets/e5a0199c-ac40-4950-a00c-de21deb001ad" />
 
-Após preencher todos os campos, clique em Salvar para registrar o produto. Se não quiser salvar, clique em Voltar para retornar à lista de produtos.  
+- A funcionalidade Produtos em Baixa exibe automaticamente todos os produtos cujo estoque atual está igual ou menor que 10 unidades.
+- Esse recurso ajuda a identificar rapidamente itens que precisam de reposição, evitando rupturas e facilitando a organização do estoque.
 
 ## Tela – Lista de Fornecedores  
 <img width="1365" height="428" alt="Image" src="https://github.com/user-attachments/assets/f8db5d2f-f780-4f5b-bc7e-5f3ab88ae566" />
